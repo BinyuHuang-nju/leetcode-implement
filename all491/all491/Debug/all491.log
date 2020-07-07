@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\study projects\oj\all491\all491\main.cpp(17,1): error C2661: “std::vector<std::vector<int,std::allocator<int>>,std::allocator<std::vector<int,std::allocator<int>>>>::insert”: 没有重载函数接受 1 个参数
+D:\study projects\oj\all491\all491\main.cpp(18,31): warning C4018: “<”: 有符号/无符号不匹配

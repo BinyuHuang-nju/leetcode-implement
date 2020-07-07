@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\study projects\oj\all496\all496\main.cpp(12,27): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all496\all496\main.cpp(24,27): warning C4018: “<”: 有符号/无符号不匹配
+  all496.vcxproj -> D:\study projects\oj\all496\Debug\all496.exe

@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\study projects\oj\all559\all559\main.cpp(28,27): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all559\all559\main.cpp(30,27): warning C4390: “;”: 找到空的受控语句；这是否是有意的?
+  all559.vcxproj -> D:\study projects\oj\all559\Debug\all559.exe

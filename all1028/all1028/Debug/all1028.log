@@ -1,0 +1,5 @@
+﻿  main.cpp
+D:\study projects\oj\all1028\all1028\main.cpp(24,18): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all1028\all1028\main.cpp(30,18): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all1028\all1028\main.cpp(51,27): warning C4018: “<”: 有符号/无符号不匹配
+  all1028.vcxproj -> D:\study projects\oj\all1028\Debug\all1028.exe

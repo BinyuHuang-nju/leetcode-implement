@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\study projects\oj\all8\all8\main.cpp(10,22): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all8\all8\main.cpp(24,22): warning C4018: “<”: 有符号/无符号不匹配
+  all8.vcxproj -> D:\study projects\oj\all8\Debug\all8.exe

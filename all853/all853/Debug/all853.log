@@ -1,0 +1,14 @@
+﻿  main.cpp
+D:\study projects\oj\all853\all853\main.cpp(17,27): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all853\all853\main.cpp(24,27): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all853\all853\main.cpp(32,18): warning C4244: “初始化”: 从“_Ty”转换到“int”，可能丢失数据
+          with
+          [
+              _Ty=double
+          ]
+D:\study projects\oj\all853\all853\main.cpp(38,35): warning C4244: “=”: 从“_Ty”转换到“int”，可能丢失数据
+          with
+          [
+              _Ty=double
+          ]
+  all853.vcxproj -> D:\study projects\oj\all853\Debug\all853.exe

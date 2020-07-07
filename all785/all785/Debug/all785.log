@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\study projects\oj\all785\all785\main.cpp(16,27): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all785\all785\main.cpp(23,31): warning C4018: “<”: 有符号/无符号不匹配
+  all785.vcxproj -> D:\study projects\oj\all785\Debug\all785.exe

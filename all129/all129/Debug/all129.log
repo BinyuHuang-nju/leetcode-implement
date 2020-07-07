@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\study projects\oj\all129\all129\main.cpp(20): warning C4715: “Solution::sumNumbers”: 不是所有的控件路径都返回值
+  all129.vcxproj -> D:\study projects\oj\all129\Debug\all129.exe

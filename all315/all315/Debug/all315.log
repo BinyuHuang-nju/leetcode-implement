@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\study projects\oj\all315\all315\main.cpp(24,27): warning C4018: “<”: 有符号/无符号不匹配
+  all315.vcxproj -> D:\study projects\oj\all315\Debug\all315.exe

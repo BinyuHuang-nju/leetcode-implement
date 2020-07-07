@@ -1,0 +1,5 @@
+﻿  main.cpp
+D:\study projects\oj\all123\all123\main.cpp(12,18): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all123\all123\main.cpp(14,22): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all123\all123\main.cpp(30,31): warning C4018: “<”: 有符号/无符号不匹配
+  all123.vcxproj -> D:\study projects\oj\all123\Debug\all123.exe

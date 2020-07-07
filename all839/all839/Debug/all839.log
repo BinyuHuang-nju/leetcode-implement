@@ -1,0 +1,7 @@
+﻿  main.cpp
+D:\study projects\oj\all839\all839\main.cpp(31,27): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all839\all839\main.cpp(33,27): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all839\all839\main.cpp(34,35): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all839\all839\main.cpp(40,27): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all839\all839\main.cpp(51,27): warning C4018: “<”: 有符号/无符号不匹配
+  all839.vcxproj -> D:\study projects\oj\all839\Debug\all839.exe

@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\study projects\oj\all44\all44\main.cpp(9,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\study projects\oj\all44\all44\main.cpp(55,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  all44.vcxproj -> D:\study projects\oj\all44\x64\Debug\all44.exe

@@ -1,0 +1,11 @@
+﻿  main.cpp
+D:\study projects\oj\all179\all179\main.cpp(13,23): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all179\all179\main.cpp(18,23): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all179\all179\main.cpp(24,23): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all179\all179\main.cpp(31,23): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all179\all179\main.cpp(31,41): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all179\all179\main.cpp(39,15): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all179\all179\main.cpp(40,22): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all179\all179\main.cpp(47,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all179\all179\main.cpp(48,22): warning C4018: “<”: 有符号/无符号不匹配
+  all179.vcxproj -> D:\study projects\oj\all179\Debug\all179.exe

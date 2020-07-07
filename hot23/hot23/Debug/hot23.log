@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\study projects\oj\hot23\hot23\main.cpp(18,27): warning C4018: “<”: 有符号/无符号不匹配
+  hot23.vcxproj -> D:\study projects\oj\hot23\Debug\hot23.exe

@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\study projects\oj\all71\all71\main.cpp(13,18): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all71\all71\main.cpp(29,26): warning C4018: “<”: 有符号/无符号不匹配
+  all71.vcxproj -> D:\study projects\oj\all71\Debug\all71.exe

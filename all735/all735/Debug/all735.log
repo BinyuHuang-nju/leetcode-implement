@@ -1,0 +1,6 @@
+﻿  main.cpp
+D:\study projects\oj\all735\all735\main.cpp(14,31): warning C4018: “<=”: 有符号/无符号不匹配
+D:\study projects\oj\all735\all735\main.cpp(27,43): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all735\all735\main.cpp(32,43): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all735\all735\main.cpp(51,31): warning C4018: “<”: 有符号/无符号不匹配
+  all735.vcxproj -> D:\study projects\oj\all735\Debug\all735.exe

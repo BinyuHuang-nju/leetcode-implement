@@ -1,0 +1,5 @@
+﻿  main.cpp
+D:\study projects\oj\hot36\hot36\main.cpp(16,23): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\hot36\hot36\main.cpp(17,27): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\hot36\hot36\main.cpp(33,27): warning C4018: “<”: 有符号/无符号不匹配
+  hot36.vcxproj -> D:\study projects\oj\hot36\Debug\hot36.exe

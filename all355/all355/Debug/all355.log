@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\study projects\oj\all355\all355\main.cpp(43,17): warning C4018: “>”: 有符号/无符号不匹配
+D:\study projects\oj\all355\all355\main.cpp(54,17): warning C4018: “>”: 有符号/无符号不匹配
+  all355.vcxproj -> D:\study projects\oj\all355\Debug\all355.exe

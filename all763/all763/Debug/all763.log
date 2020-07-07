@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\study projects\oj\all763\all763\main.cpp(14,23): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all763\all763\main.cpp(18,20): warning C4018: “<”: 有符号/无符号不匹配
+  all763.vcxproj -> D:\study projects\oj\all763\Debug\all763.exe

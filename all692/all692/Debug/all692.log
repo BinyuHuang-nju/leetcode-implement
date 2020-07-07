@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\study projects\oj\all692\all692\main.cpp(88,25): warning C4018: “<=”: 有符号/无符号不匹配
+D:\study projects\oj\all692\all692\main.cpp(175,25): warning C4018: “<=”: 有符号/无符号不匹配
+  all692.vcxproj -> D:\study projects\oj\all692\Debug\all692.exe

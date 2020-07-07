@@ -1,0 +1,6 @@
+﻿  main.cpp
+D:\study projects\oj\all399\all399\main.cpp(25,23): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all399\all399\main.cpp(42,23): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all399\all399\main.cpp(84,23): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all399\all399\main.cpp(109,23): warning C4018: “<”: 有符号/无符号不匹配
+  all399.vcxproj -> D:\study projects\oj\all399\Debug\all399.exe

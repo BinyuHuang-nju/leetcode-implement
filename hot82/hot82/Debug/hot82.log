@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\study projects\oj\hot82\hot82\main.cpp(15,23): warning C4018: “<”: 有符号/无符号不匹配
+  hot82.vcxproj -> D:\study projects\oj\hot82\Debug\hot82.exe

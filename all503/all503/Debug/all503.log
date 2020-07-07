@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\study projects\oj\all503\all503\main.cpp(14,27): warning C4018: “<”: 有符号/无符号不匹配
+D:\study projects\oj\all503\all503\main.cpp(20,19): warning C4018: “<”: 有符号/无符号不匹配
+  all503.vcxproj -> D:\study projects\oj\all503\Debug\all503.exe

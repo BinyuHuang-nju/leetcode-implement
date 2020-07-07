@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\study projects\oj\all413\all413\main.cpp(12,23): warning C4018: “<”: 有符号/无符号不匹配
+  all413.vcxproj -> D:\study projects\oj\all413\Debug\all413.exe
