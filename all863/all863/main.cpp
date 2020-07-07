@@ -10,25 +10,25 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-/* Solution1£º
-C++£¬hash+dfs
-Ö´ĞĞÓÃÊ±£º 8 ms , ÔÚËùÓĞ C++ Ìá½»ÖĞ»÷°ÜÁË 74.92% µÄÓÃ»§
-ÄÚ´æÏûºÄ£º 13.1 MB , ÔÚËùÓĞ C++ Ìá½»ÖĞ»÷°ÜÁË 100.00% µÄÓÃ»§
+/* Solution1ï¼š
+C++ï¼Œhash+dfs
+æ‰§è¡Œç”¨æ—¶ï¼š 8 ms , åœ¨æ‰€æœ‰ C++ æäº¤ä¸­å‡»è´¥äº† 74.92% çš„ç”¨æˆ·
+å†…å­˜æ¶ˆè€—ï¼š 13.1 MB , åœ¨æ‰€æœ‰ C++ æäº¤ä¸­å‡»è´¥äº† 100.00% çš„ç”¨æˆ·
 
-Ê¹ÓÃhash±í£¬±íÖĞ½ö´æ´¢targetµÄ×æÏÈ½Úµã»òtarget½ÚµãµÄĞÅÏ¢£¬
-locationÓÃÓÚÅĞ¶ÏtargetÎ»ÓÚÄ³½ÚµãµÄºÎ´¦£¬0´ú±ítarget¾ÍÊÇ¸Ã½Úµã£¬
-1´ú±ítargetÎ»ÓÚ¸Ã½Úµã×ó×ÓÊ÷£¬2´ú±ítargetÎ»ÓÚ¸Ã½ÚµãÓÒ×ÓÊ÷£»
-depthÓÃÓÚ¼ÇÂ¼Ä³½ÚµãÓëtargetÖ®¼äµÄ¾àÀë£¬×¢Òâ£¬¸Ã½ÚµãÒ»¶¨ÊÇtarget»òtarget×æÏÈ½Úµã¡£
-¼ÆËã·½·¨¼ûcomputeDpethº¯Êı¡£
-¶Ôhash±íÖĞÃ¿¸ö½Úµã½øĞĞdfs¡£
-Èô¸Ã½Úµã¾ÍÊÇtarget£¬½øĞĞdfs²¢´æ´¢¾àÀë×Ô¼º¾àÀëÎªKµÄ×Ó½Úµã£»
-Èô¸Ã½ÚµãÊÇtargetµÄ×æÏÈ½Úµã£¬Í¨¹ıdepth»ñµÃ¸Ã×æÏÈ½ÚµãÓëtargetµÄ¾àÀë£¬¼ÇÎªdis¡£
-Ôò£º
-Èôdis>K£¬²»±Ø¿¼ÂÇ£¬ÒòÎª¸Ã½Úµã»ò¸Ã½ÚµãÁîÒ»×ÓÊ÷½ÚµãÓëtarget¾àÀë¾ù´óÓÚK£»
-Èôdis==K£¬Ôò½«¸Ã×æÏÈ½Úµã´æ´¢¼´¿É£»
-Èôdis<K£¬ÕâÊ±Í¨¹ılocation»ñµÃ×æÏÈ½Úµãq´¦µÄÁíÒ»²àÃ»ÓĞtargetµÄ×ÓÊ÷£¬
-ÉèÖÃµ÷ÓÃ½ÚµãÎªqµÄÁíÒ»²à×Ó½Úµã£¬¾àÀëÎªK-dis-1£¬½øĞĞdfs¡£
-(disÊÇ¸Ã×æÏÈ½Úµãµ½targetµÄ¾àÀë£¬1ÊÇ¸Ã×æÏÈ½Úµãµ½ÁíÒ»²à×Ó½ÚµãµÄ¾àÀë)
+ä½¿ç”¨hashè¡¨ï¼Œè¡¨ä¸­ä»…å­˜å‚¨targetçš„ç¥–å…ˆèŠ‚ç‚¹æˆ–targetèŠ‚ç‚¹çš„ä¿¡æ¯ï¼Œ
+locationç”¨äºåˆ¤æ–­targetä½äºæŸèŠ‚ç‚¹çš„ä½•å¤„ï¼Œ0ä»£è¡¨targetå°±æ˜¯è¯¥èŠ‚ç‚¹ï¼Œ
+1ä»£è¡¨targetä½äºè¯¥èŠ‚ç‚¹å·¦å­æ ‘ï¼Œ2ä»£è¡¨targetä½äºè¯¥èŠ‚ç‚¹å³å­æ ‘ï¼›
+depthç”¨äºè®°å½•æŸèŠ‚ç‚¹ä¸targetä¹‹é—´çš„è·ç¦»ï¼Œæ³¨æ„ï¼Œè¯¥èŠ‚ç‚¹ä¸€å®šæ˜¯targetæˆ–targetç¥–å…ˆèŠ‚ç‚¹ã€‚
+è®¡ç®—æ–¹æ³•è§computeDpethå‡½æ•°ã€‚
+å¯¹hashè¡¨ä¸­æ¯ä¸ªèŠ‚ç‚¹è¿›è¡Œdfsã€‚
+è‹¥è¯¥èŠ‚ç‚¹å°±æ˜¯targetï¼Œè¿›è¡Œdfså¹¶å­˜å‚¨è·ç¦»è‡ªå·±è·ç¦»ä¸ºKçš„å­èŠ‚ç‚¹ï¼›
+è‹¥è¯¥èŠ‚ç‚¹æ˜¯targetçš„ç¥–å…ˆèŠ‚ç‚¹ï¼Œé€šè¿‡depthè·å¾—è¯¥ç¥–å…ˆèŠ‚ç‚¹ä¸targetçš„è·ç¦»ï¼Œè®°ä¸ºdisã€‚
+åˆ™ï¼š
+è‹¥dis>Kï¼Œä¸å¿…è€ƒè™‘ï¼Œå› ä¸ºè¯¥èŠ‚ç‚¹æˆ–è¯¥èŠ‚ç‚¹ä»¤ä¸€å­æ ‘èŠ‚ç‚¹ä¸targetè·ç¦»å‡å¤§äºKï¼›
+è‹¥dis==Kï¼Œåˆ™å°†è¯¥ç¥–å…ˆèŠ‚ç‚¹å­˜å‚¨å³å¯ï¼›
+è‹¥dis<Kï¼Œè¿™æ—¶é€šè¿‡locationè·å¾—ç¥–å…ˆèŠ‚ç‚¹qå¤„çš„å¦ä¸€ä¾§æ²¡æœ‰targetçš„å­æ ‘ï¼Œ
+è®¾ç½®è°ƒç”¨èŠ‚ç‚¹ä¸ºqçš„å¦ä¸€ä¾§å­èŠ‚ç‚¹ï¼Œè·ç¦»ä¸ºK-dis-1ï¼Œè¿›è¡Œdfsã€‚
+(disæ˜¯è¯¥ç¥–å…ˆèŠ‚ç‚¹åˆ°targetçš„è·ç¦»ï¼Œ1æ˜¯è¯¥ç¥–å…ˆèŠ‚ç‚¹åˆ°å¦ä¸€ä¾§å­èŠ‚ç‚¹çš„è·ç¦»)
 */
 class Solution1 {
 
@@ -111,45 +111,72 @@ private:
     }
 };
 
+/* Solution2:
+C++ hash+dfs
+æ‰§è¡Œç”¨æ—¶ï¼š4 ms, åœ¨æ‰€æœ‰ C++ æäº¤ä¸­å‡»è´¥äº†94.27%çš„ç”¨æˆ·
+å†…å­˜æ¶ˆè€—ï¼š9.9 MB, åœ¨æ‰€æœ‰ C++ æäº¤ä¸­å‡»è´¥äº†100.00%çš„ç”¨æˆ·
+
+æ²¿ç”¨Solution1çš„æ€æƒ³ï¼Œç”¨locationè®°å½•æŸèŠ‚ç‚¹æ˜¯å¦ä¸ºtargetçš„ç¥–å…ˆèŠ‚ç‚¹ï¼Œè‹¥æ˜¯ï¼Œ
+targetåœ¨å…¶å·¦å­æ ‘è¿˜æ˜¯å³å­æ ‘ä¸­æˆ–æ˜¯å…¶æœ¬èº«ã€‚
+è¿™é‡Œå°†è¿™äº›locationä¸­è®°å½•çš„ç¥–å…ˆèŠ‚ç‚¹è¿›è¡Œå˜æ¢ï¼Œä½¿targetæˆä¸ºå˜æ¢åçš„æ ‘çš„æ ¹èŠ‚ç‚¹ã€‚
+è¿™é‡Œåœ¨äº¤æ¢(changeChild)å‰å…ˆè°ƒç”¨ä¸€æ¬¡increaseNodeï¼Œä¹‹åå†è°ƒç”¨ä¸€æ¬¡ï¼ŒåŸå› åœ¨äºï¼š
+åœ¨æœ€åæƒ…å†µä¸‹ï¼Œtargetæœ¬èº«æœ‰ä¸¤ä¸ªéç©ºå­èŠ‚ç‚¹ï¼Œå†åŠ ä¸Šå˜æ¢åï¼Œå…¶çˆ¶èŠ‚ç‚¹ä¹Ÿæˆä¸ºäº†
+å®ƒçš„å­èŠ‚ç‚¹ï¼Œé‚£ä¹ˆtargetä¼šæœ‰ä¸‰ä¸ªå­èŠ‚ç‚¹ï¼Œåœ¨ä¸æ”¹å˜æ•°æ®ç»“æ„çš„æƒ…å†µä¸‹ï¼ŒèŠ‚ç‚¹æ— æ³•
+å­˜æ”¾ï¼Œå› æ­¤è¿™é‡Œç›´æ¥å…ˆè®¡ç®—targetçš„å­æ ‘ä¸­è·ç¦»targetä¸ºKçš„èŠ‚ç‚¹ï¼Œå¹¶å°†targetçš„å­æ ‘å…¨éƒ¨ä¸¢å¼ƒï¼Œ
+å³targetä»…ä¿ç•™å…¶çˆ¶èŠ‚ç‚¹ä½œä¸ºå®ƒçš„æ–°çš„å­èŠ‚ç‚¹ã€‚éšåå†è°ƒç”¨increaseNodeä¾¿ä¸ä¼šå‡ºé”™ã€‚
+ä½†å€¼å¾—æ³¨æ„çš„æ˜¯ï¼Œåœ¨Kä¸º0çš„ç‰¹æ®Šæƒ…å†µä¸‹ï¼Œåˆ™targetä¼šè¢«å†™å…¥ä¸¤æ¬¡ï¼Œå› æ­¤é¦–å…ˆæŠŠK=0
+æƒ…å†µäº¤ä»£ã€‚
+*/
 class Solution2 {
 
 private:
     map<TreeNode*, int> location; // -1:not child,0:me,1:left child,2:right child
-    map<TreeNode*, TreeNode*> child;
+    //map<TreeNode*, TreeNode*> child;
 public:
     vector<int> distanceK(TreeNode* root, TreeNode* target, int K) {
         if (!root)
             return {};
+        if (K == 0)
+            return { target->val };
         isAncestry(root, target);
         vector<int> results;
-        for (map<TreeNode*, int>::iterator iter = location.begin(); iter != location.end(); iter++) {
-            if (iter->second <= 0) {
-                continue;
-            }
-            else if (iter->second == 1) {
-                int dis = INT_MAX;
-                if (depth.count(iter->first))
-                    dis = depth[iter->first];
-                if (dis < K) {
-                    increaseNode(results, iter->first->right, K - dis - 1);
-                }
-                else if (dis == K)
-                    results.push_back(iter->first->val);
-            }
-            else if (iter->second == 2) {
-                int dis = INT_MAX;
-                if (depth.count(iter->first))
-                    dis = depth[iter->first];
-                if (dis < K)
-                    increaseNode(results, iter->first->left, K - dis - 1);
-                else if (dis == K)
-                    results.push_back(iter->first->val);
-            }
-        }
+        increaseNode(results, target, K);
+        changeChild(root, NULL);
+        increaseNode(results, target, K);
         return results;
     }
 private:
 
+    void changeChild(TreeNode* root,TreeNode* parent) {
+        if (!root)
+            return;
+        if (!location.count(root) || location[root] < 0)
+            return;
+        if (location[root] == 0) {
+            root->right = NULL;
+            root->left = parent;
+        }
+        else if (location[root] == 1) {
+            changeChild(root->left, root);
+            root->left = parent;
+        }
+        else if (location[root] == 2) {
+            changeChild(root->right, root);
+            root->right = parent;
+        }
+    }
+    void increaseNode(vector<int>& results, TreeNode* root, int distance) {
+        if (!root)
+            return;
+        if (distance == 0)
+            results.push_back(root->val);
+        else {
+            if (root->left)
+                increaseNode(results, root->left, distance - 1);
+            if (root->right)
+                increaseNode(results, root->right, distance - 1);
+        }
+    }
     bool isAncestry(TreeNode* root, TreeNode* target) {
         if (root == target) {
             location[root] = 0;
