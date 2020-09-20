@@ -111,45 +111,72 @@ private:
     }
 };
 
+
+/* Solution2:
+C++ hash+dfs
+执行用时：4 ms, 在所有 C++ 提交中击败了94.27%的用户
+内存消耗：9.9 MB, 在所有 C++ 提交中击败了100.00%的用户
+沿用Solution1的思想，用location记录某节点是否为target的祖先节点，若是，
+target在其左子树还是右子树中或是其本身。
+这里将这些location中记录的祖先节点进行变换，使target成为变换后的树的根节点。
+这里在交换(changeChild)前先调用一次increaseNode，之后再调用一次，原因在于：
+在最坏情况下，target本身有两个非空子节点，再加上变换后，其父节点也成为了
+它的子节点，那么target会有三个子节点，在不改变数据结构的情况下，节点无法
+存放，因此这里直接先计算target的子树中距离target为K的节点，并将target的子树全部丢弃，
+即target仅保留其父节点作为它的新的子节点。随后再调用increaseNode便不会出错。
+但值得注意的是，在K为0的特殊情况下，则target会被写入两次，因此首先把K=0
+情况交代。
+*/
 class Solution2 {
 
 private:
     map<TreeNode*, int> location; // -1:not child,0:me,1:left child,2:right child
-    map<TreeNode*, TreeNode*> child;
+    //map<TreeNode*, TreeNode*> child;
 public:
     vector<int> distanceK(TreeNode* root, TreeNode* target, int K) {
         if (!root)
             return {};
+        if (K == 0)
+            return { target->val };
         isAncestry(root, target);
         vector<int> results;
-        for (map<TreeNode*, int>::iterator iter = location.begin(); iter != location.end(); iter++) {
-            if (iter->second <= 0) {
-                continue;
-            }
-            else if (iter->second == 1) {
-                int dis = INT_MAX;
-                if (depth.count(iter->first))
-                    dis = depth[iter->first];
-                if (dis < K) {
-                    increaseNode(results, iter->first->right, K - dis - 1);
-                }
-                else if (dis == K)
-                    results.push_back(iter->first->val);
-            }
-            else if (iter->second == 2) {
-                int dis = INT_MAX;
-                if (depth.count(iter->first))
-                    dis = depth[iter->first];
-                if (dis < K)
-                    increaseNode(results, iter->first->left, K - dis - 1);
-                else if (dis == K)
-                    results.push_back(iter->first->val);
-            }
-        }
+        increaseNode(results, target, K);
+        changeChild(root, NULL);
+        increaseNode(results, target, K);
         return results;
     }
 private:
 
+    void changeChild(TreeNode* root,TreeNode* parent) {
+        if (!root)
+            return;
+        if (!location.count(root) || location[root] < 0)
+            return;
+        if (location[root] == 0) {
+            root->right = NULL;
+            root->left = parent;
+        }
+        else if (location[root] == 1) {
+            changeChild(root->left, root);
+            root->left = parent;
+        }
+        else if (location[root] == 2) {
+            changeChild(root->right, root);
+            root->right = parent;
+        }
+    }
+    void increaseNode(vector<int>& results, TreeNode* root, int distance) {
+        if (!root)
+            return;
+        if (distance == 0)
+            results.push_back(root->val);
+        else {
+            if (root->left)
+                increaseNode(results, root->left, distance - 1);
+            if (root->right)
+                increaseNode(results, root->right, distance - 1);
+        }
+    }
     bool isAncestry(TreeNode* root, TreeNode* target) {
         if (root == target) {
             location[root] = 0;
